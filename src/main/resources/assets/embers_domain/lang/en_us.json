@@ -1,0 +1,19 @@
+{
+  "item.embers_domain.sapphire": "Sapphire",
+  "item.embers_domain.raw_sapphire": "Raw Sapphire",
+
+  "block.embers_domain.sapphire_block": "Sapphire Block",
+  "block.embers_domain.raw_sapphire_block": "Raw Sapphire Block",
+  "block.embers_domain.sapphire_ore": "Sapphire Ore",
+  "block.embers_domain.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.embers_domain.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+  "block.embers_domain.nether_sapphire_ore": "Nether Sapphire Ore",
+  "item.embers_domain.metal_detector": "Metal Detector",
+  "block.embers_domain.sound_block": "Sound Block",
+  "item.embers_domain.strawberry": "Strawberry",
+  "item.embers_domain.pine_cone": "Pine Cone",
+
+  "tooltip.embers_domain.metal_detector.tooltip": "Find valuables underground!",
+
+  "creative.embers_domain_tab": "Ember's Domain"
+}

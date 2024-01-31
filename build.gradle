@@ -69,6 +69,7 @@ minecraft {
             // "REGISTRIES": For firing of registry events.
             // "REGISTRYDUMP": For getting the contents of all registries.
             property 'forge.logging.markers', 'REGISTRIES'
+            property 'mixin.debug.verbose', 'true'
 
             // Recommended logging level for the console
             // You can set various levels here.
@@ -85,6 +86,8 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
         }
 
         server {
@@ -121,6 +124,24 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+
+    maven {
+        // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+
+    }
+    maven {
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
+    }
+
 }
 
 dependencies {
@@ -137,6 +158,90 @@ dependencies {
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
+    implementation fg.deobf("curse.maven:iceberg-520110:4845512")
+    implementation fg.deobf("curse.maven:creativecore-257814:4874915")
+    implementation fg.deobf("curse.maven:architectury-api-419699:4663010")
+    implementation fg.deobf("curse.maven:ferritecore-429235:4810975")
+    implementation fg.deobf("curse.maven:puzzles-lib-495476:4882383")
+    implementation fg.deobf("curse.maven:prism-lib-638111:4650325")
+    implementation fg.deobf("curse.maven:balm-531761:4943500")
+    implementation fg.deobf("curse.maven:bookshelf-228525:4808092")
+    implementation fg.deobf("curse.maven:placebo-283644:4913663")
+
+    // compile against the JEI API but do not include it at runtime
+    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+
+    // Visit https://www.curseforge.com/minecraft/mc-mods/jade/files/all?filter-status=1&filter-game-version=2020709689%3A7498
+    // to get the latest version's jade_id
+    implementation fg.deobf("curse.maven:jade-324717:${jade_id}")
+
+    implementation fg.deobf("curse.maven:embeddium-908741:5067980")
+    implementation fg.deobf("curse.maven:rubidium-extra-654373:5071765")
+    implementation fg.deobf("curse.maven:magnesium-extras-558905:4632207")
+    implementation fg.deobf("curse.maven:dynamiclights-reforged-551736:4731947")
+    implementation fg.deobf("curse.maven:textrues-embeddium-options-910506:5069200")
+
+    implementation fg.deobf("curse.maven:crafting-tweaks-233071:4939240")
+
+    //implementation fg.deobf("curse.maven:entityculling-448233:4573621")
+
+    implementation fg.deobf("curse.maven:attributefix-280510:4911084")
+
+    implementation fg.deobf("curse.maven:mouse-tweaks-60089:4581240")
+
+    implementation fg.deobf("curse.maven:polymorph-388800:4928442")
+
+    implementation fg.deobf("curse.maven:searchables-858542:4779110")
+    implementation fg.deobf("curse.maven:controlling-250398:4646682")
+
+    implementation fg.deobf("curse.maven:appleskin-248787:4770828")
+    implementation fg.deobf("curse.maven:legendary-tooltips-532127:4662781")
+
+    implementation fg.deobf("curse.maven:geckolib-388172:4822252")
+
+    implementation fg.deobf("curse.maven:sound-physics-remastered-535489:4721571")
+
+    // Compile against only the API artifact
+    compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api"))
+    // Use the full Curios API jar at runtime
+    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}"))
+
+    implementation fg.deobf("curse.maven:patchouli-306770:4966125")
+
+    implementation fg.deobf("curse.maven:ftb-library-forge-404465:4864329")
+    implementation fg.deobf("curse.maven:ftb-ultimine-forge-386134:4597013")
+
+    implementation fg.deobf("curse.maven:fps-reducer-280294:4586784")
+
+    implementation fg.deobf("curse.maven:cloth-config-348521:4633444")
+    implementation fg.deobf("curse.maven:betterf3-401648:4863626")
+
+    implementation fg.deobf("curse.maven:visual-workbench-500273:4612695")
+
+    implementation fg.deobf("curse.maven:inventory-sorter-240633:4655091")
+
+    implementation fg.deobf("curse.maven:neat-238372:4580940")
+
+    implementation fg.deobf("curse.maven:ambientsounds-254284:4887789")
+
+    implementation fg.deobf("curse.maven:crafting-tweaks-233071:4939240")
+
+    implementation fg.deobf("curse.maven:carry-on-274259:4882500")
+
+    implementation fg.deobf("curse.maven:enchantment-descriptions-250419:4756855")
+
+    implementation fg.deobf("curse.maven:potionsmaster-356801:4722415")
+
+    implementation fg.deobf("curse.maven:apothic-attributes-898963:4954000")
+    implementation fg.deobf("curse.maven:apotheotic-additions-924640:5063140")
+    implementation fg.deobf("curse.maven:apotheosis-313970:5030868")
+
+    implementation fg.deobf("curse.maven:journeymap-32274:4873848")
+
+    implementation fg.deobf("curse.maven:natures-compass-252848:4712189")
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
