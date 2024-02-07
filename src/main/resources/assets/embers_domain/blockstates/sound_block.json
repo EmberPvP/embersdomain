@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "embers_domain:block/sound_block"
+    }
+  }
+}
