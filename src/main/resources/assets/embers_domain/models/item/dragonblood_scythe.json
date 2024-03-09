@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "embers_domain:item/dragonblood_scythe_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "embers_domain:item/dragonblood_scythe_3d"
+    },
+    "ground": {
+      "parent": "embers_domain:item/dragonblood_scythe_3d"
+    },
+    "fixed": {
+      "parent": "embers_domain:item/dragonblood_scythe_3d"
+    }
+  }
+}

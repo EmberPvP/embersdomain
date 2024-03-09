@@ -21,26 +21,26 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
-                .add(ModBlocks.SAPPHIRE_ORE.get()).addTag(Tags.Blocks.ORES);
+                .add(ModBlocks.MITHRIL_ORE.get()).addTag(Tags.Blocks.ORES);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.SAPPHIRE_BLOCK.get(),
-                    ModBlocks.RAW_SAPPHIRE_BLOCK.get(),
-                    ModBlocks.NETHER_SAPPHIRE_ORE.get(),
-                    ModBlocks.END_STONE_SAPPHIRE_ORE.get(),
-                    ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
-                    ModBlocks.SAPPHIRE_ORE.get(),
+                .add(ModBlocks.MITHRIL_BLOCK.get(),
+                    ModBlocks.RAW_MITHRIL_BLOCK.get(),
+                    ModBlocks.NETHER_MITHRIL_ORE.get(),
+                    ModBlocks.END_STONE_MITHRIL_ORE.get(),
+                    ModBlocks.DEEPSLATE_MITHRIL_ORE.get(),
+                    ModBlocks.MITHRIL_ORE.get(),
                     ModBlocks.SOUND_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.SAPPHIRE_BLOCK.get());
+                .add(ModBlocks.MITHRIL_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
+                .add(ModBlocks.RAW_MITHRIL_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.NETHER_SAPPHIRE_ORE.get())
-                .add(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
+                .add(ModBlocks.NETHER_MITHRIL_ORE.get())
+                .add(ModBlocks.END_STONE_MITHRIL_ORE.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
                 //add(ModBlocks.END_STONE_SAPPHIRE_ORE.get());

@@ -13,6 +13,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.tysontheember.embers_domain.loot.ModLootModifiers;
+import net.tysontheember.embers_domain.util.ModItemProperties;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,14 +31,21 @@ public class EmbersDomain {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModLootModifiers.register(modEventBus);
+
+        modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         //modEventBus.addListener(this::addCreative);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    private void clientSetup(final FMLClientSetupEvent event) {
+        ModItemProperties.addCustomItemProperties();
+    }
 
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        ModItemProperties.addCustomItemProperties();
     }
 
     //private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -57,7 +66,6 @@ public class EmbersDomain {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
         }
     }
 }

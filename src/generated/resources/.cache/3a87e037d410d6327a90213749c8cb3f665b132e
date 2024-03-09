@@ -1,0 +1,5 @@
+// 1.20.1	2024-03-07T17:45:17.703333	Global Loot Modifiers : embers_domain
+4ded1082b4387fcee646b2bf3b1656df92622a30 data/embers_domain/loot_modifiers/dragonblood_scythe_from_suspicious_sand.json
+610ecd784e8a47de09a8cc73251c964deba98064 data/embers_domain/loot_modifiers/sapphire_from_diamond.json
+3a7ddcdaafc100b9ca7b188d71b7d836c6d5180a data/embers_domain/loot_modifiers/sapphire_from_warden.json
+1300c40fd53587226ed3cb238e3fa27194851da1 data/forge/loot_modifiers/global_loot_modifiers.json

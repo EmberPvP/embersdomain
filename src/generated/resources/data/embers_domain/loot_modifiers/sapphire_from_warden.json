@@ -1,0 +1,10 @@
+{
+  "type": "embers_domain:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/warden"
+    }
+  ],
+  "item": "embers_domain:mithril"
+}

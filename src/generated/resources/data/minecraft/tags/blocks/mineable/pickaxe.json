@@ -1,0 +1,11 @@
+{
+  "values": [
+    "embers_domain:mithril_block",
+    "embers_domain:raw_mithril_block",
+    "embers_domain:nether_mithril_ore",
+    "embers_domain:end_stone_mithril_ore",
+    "embers_domain:deepslate_mithril_ore",
+    "embers_domain:mithril_ore",
+    "embers_domain:sound_block"
+  ]
+}

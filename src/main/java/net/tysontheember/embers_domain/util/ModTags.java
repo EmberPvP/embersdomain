@@ -11,6 +11,9 @@ import net.tysontheember.embers_domain.EmbersDomain;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
+        public static final TagKey<Block> NEEDS_MITHRIL_TOOL = tag("needs_mithril_tool");
+        public static final TagKey<Block> NEEDS_VIBRANIUM_TOOL = tag("needs_vibranium_tool");
+        public static final TagKey<Block> NEEDS_ADAMANTITE_TOOL = tag("needs_adamantite_tool");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(EmbersDomain.MOD_ID, name));

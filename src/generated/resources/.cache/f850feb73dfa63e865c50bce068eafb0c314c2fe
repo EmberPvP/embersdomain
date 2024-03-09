@@ -1,0 +1,7 @@
+// 1.20.1	2024-03-07T17:45:17.7148449	Tags for minecraft:block mod id embers_domain
+9c128503a542a493bc671e43689197cb05e5e519 data/embers_domain/tags/blocks/metal_detector_valuables.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
+8f5734862ba0a116f97a73d4107dd06b908eea3a data/minecraft/tags/blocks/mineable/pickaxe.json
+223fd1cd565d7cf033159c3f14001694fa383074 data/minecraft/tags/blocks/needs_diamond_tool.json
+ddcf8d3210e827a1bc98df058cc64929060dc386 data/minecraft/tags/blocks/needs_iron_tool.json
+a83db44d5274bf7362d254fb52ad8860fa231eb2 data/minecraft/tags/blocks/needs_stone_tool.json

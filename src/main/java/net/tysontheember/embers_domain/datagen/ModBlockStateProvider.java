@@ -17,13 +17,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
-        blockWithItem(ModBlocks.RAW_SAPPHIRE_BLOCK);
+        blockWithItem(ModBlocks.MITHRIL_BLOCK);
+        blockWithItem(ModBlocks.RAW_MITHRIL_BLOCK);
 
-        blockWithItem(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
-        blockWithItem(ModBlocks.END_STONE_SAPPHIRE_ORE);
-        blockWithItem(ModBlocks.SAPPHIRE_ORE);
-        blockWithItem(ModBlocks.NETHER_SAPPHIRE_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_MITHRIL_ORE);
+        blockWithItem(ModBlocks.END_STONE_MITHRIL_ORE);
+        blockWithItem(ModBlocks.MITHRIL_ORE);
+        blockWithItem(ModBlocks.NETHER_MITHRIL_ORE);
 
         blockWithItem(ModBlocks.SOUND_BLOCK);
     }
